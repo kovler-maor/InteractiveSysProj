@@ -1,0 +1,234 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    min-height: 100%; /* Ensure at least full viewport height */
+}
+
+.road-map-container {
+    max-width: 800px;
+    width: 80%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+    display: flex; /* Use flexbox for inner containers */
+
+}
+
+.metadata-container {
+    width: 20%; /* Adjust width as needed */
+    background-color: #f7f7f7;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-right: 2%;
+    height: 500px; /* Adjust as needed */
+}
+
+.interactivity-container {
+    position: right;
+    width: 65%; /* Adjust width as needed */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    height: 500px; /* Adjust as needed */
+    overflow-y: auto; /* Enables scrolling if content is tall */
+}
+
+.button, .sub-button {
+    background-color: #e0e0e0;
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.submenu {
+    display: none; /* Initially hide submenus */
+    padding-left: 20px; /* Indent sub-buttons */
+}
+
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    width: 80%;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Header Title Styling */
+.title h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Input Group Styling */
+.input-group {
+    margin: 20px 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.input-group input[type="range"], .input-group input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    background-color: #0084ff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Dataset Info Styling */
+.dataset-info {
+    text-align: left;
+    padding: 20px;
+}
+
+.dataset-info h2, .dataset-info p {
+    color: #333; /* h2 for titles, p for paragraph text */
+}
+
+.dataset-info a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #0084ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Analysis Steps Styling */
+.analysis-steps .step {
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.analysis-steps h3 {
+    margin: 0;
+    color: #333;
+}
+
+/* Dataset Selection Grid */
+.datasets {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.dataset-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.dataset-box h3 {
+    color: #333;
+    font-size: 20px;
+}
+
+.dataset-box:hover {
+    size: 200%;
+}
+
+/* Back to Main Button */
+.back-to-main {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #0084ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    padding: 10px 15px; /* Reduced padding */
+    font-size: 12px; /* Reduced font size */
+
+    transition: background-color 0.3s ease;
+}
+
+.back-to-main:hover {
+    background-color: #0056b3;
+}
+
+/* Dataset Size Selector - main and additional styling consolidated */
+.dataset-size-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.dataset-size-box {
+    padding: 5px 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100px; /* Fixed width for consistency */
+    transition: background-color 0.3s ease;
+}
+
+#dataset-size {
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.25s ease-in-out;
+    opacity: 1;
+}
+
+/* Footer Styling */
+footer {
+    padding: 20px 0;
+    margin-top: 40px;
+    background-color: #f7f7f7;
+    border-top: 1px solid #eaeaea;
+    position: fixed; 
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #555;
+}

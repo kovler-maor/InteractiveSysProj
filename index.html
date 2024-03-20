@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Header -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Data Analysis Project Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<!-- Footer -->
+<footer>
+    <p> &copy; All rights reserved. 2024 Project by Mor Zohar & Maor Kovler.</p>
+</footer>
+
+
+<!-- Body -->
+<body>
+
+    <div class="container">
+        <!-- centered-container -->
+        <div class="centered-container">
+
+            <!-- title -->
+            <div class="title">
+                <h1>The Data Analysis Project Generator</h1>
+            </div>
+            
+
+            <!-- dataset size selector -->
+            <div class="dataset-size-selector">
+                <button type="button" id="size-decrease" onclick="changeSize(-1)">←</button>
+                <div id="dataset-size-box" class="dataset-size-box">
+                    <span id="dataset-size">Dataset Size?</span>
+                </div>
+                <button type="button" id="size-increase" onclick="changeSize(1)">→</button>
+            </div>
+
+            <!-- form container -->
+            <div class="form-container">
+                <div class="input-group">
+                </div>
+                <div class="input-group">
+                    <label for="keywords">What do you like? Please use short keywords</label>
+                    <input type="text" id="keywords" name="keywords">
+                </div>
+                <button type="button" onclick="location.href='choose.html'">→</button>                
+            </div>
+            
+        </div>
+
+    </div>
+
+    <!-- script for size button -->
+    <script>
+        const sizes = ['Small', 'Medium', 'Large'];
+        let currentIndex = 1; // Start at 'Medium'
+        
+        function changeSize(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = sizes.length - 1;
+            if (currentIndex >= sizes.length) currentIndex = 0;
+
+            const sizeBox = document.getElementById('dataset-size');
+            sizeBox.style.opacity = 0;
+
+            setTimeout(() => {
+                sizeBox.innerText = sizes[currentIndex];
+                sizeBox.style.opacity = 1;
+            }, 250); // Matches the transition time for smooth appearance
+        }
+    </script>
+
+</body>
+
+</html>
